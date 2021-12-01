@@ -14,7 +14,7 @@ namespace WatchPortalFunction
     public static class WatchInfo
     {
         [FunctionName("WatchInfo")]
-        [return: Queue("outqueue", Connection = "AzureQueue")]
+        //[return: Queue("outqueue", Connection = "AzureQueue")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
